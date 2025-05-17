@@ -13,8 +13,12 @@ namespace WebScrappingITLA.Services
 
         public static (string Username, string Password) LoadCredentials()
         {
-            var json = File.ReadAllText(FilePath);
+            var exeDir = AppContext.BaseDirectory;
+            var jsonPath = Path.Combine(exeDir, "credentials.json");
+
+            var json = File.ReadAllText(jsonPath);
             var data = JsonSerializer.Deserialize<Dictionary<string, string>>(json);
+
             return (data["username"], data["password"]);
         }
 
