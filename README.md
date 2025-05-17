@@ -23,6 +23,7 @@ Este proyecto es una aplicación de consola desarrollada en .NET que permite hac
 
 ## ⚙️ Configuración del proyecto
 
+### 1. Clonar y configurar credenciales 
 
 ```bash
 # Clonar el repositorio
@@ -30,21 +31,24 @@ git clone https://github.com/Edward2323/WebScrappingITLA
 
 # Entrar en el directorio del proyecto
 cd WebScrappingITLA
-
-# Publicar el proyecto como archivo ejecutable único
-dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o ./publish
-
-# Renombrar el ejecutable, le puedes poner cualquier nombre
-ren .\publish\WebScrappingITLA.exe itlatasks.exe
 ```
-
-### 1. Configurar credenciales 
 
 1. Abre el proyecto
 
 2. Establezca sus credenciales en el archivo ```credential.JSON```
 
-### 2. Ejecutar desde cualquier lugar 
+### 2. Generar ejecutable
+
+```bash
+# Publicar el proyecto como archivo ejecutable único
+dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o ./publish
+
+# Renombrar el ejecutable, le puedes poner cualquier nombre (Opcional)
+ren .\publish\WebScrappingITLA.exe itlatasks.exe
+```
+
+
+### 3. Ejecutar desde cualquier lugar 
 
 1. Copia el ejecutable itlatasks.exe a una carpeta permanente, por ejemplo:
 ```C:\Tools\```
